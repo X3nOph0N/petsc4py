@@ -32,12 +32,14 @@ def name():
     return 'petsc4py'
 
 def version():
-    import re
-    fh = open(os.path.join('src', '__init__.py'))
-    try: data = fh.read()
-    finally: fh.close()
-    m = re.search(r"__version__\s*=\s*'(.*)'", data)
-    return m.groups()[0]
+    # import re
+    # fh = open(os.path.join('src', '__init__.py'))
+    # try: data = fh.read()
+    # finally: fh.close()
+    # m = re.search(r"__version__\s*=\s*'(.*)'", data)
+    # return m.groups()[0]
+    from src import __version__
+    return __version__
 
 name     = name()
 version  = version()

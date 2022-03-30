@@ -275,7 +275,7 @@ class config(_config):
             log.info(' * linker:      %s' % linker)
         log.info('-' * 70)
 
-    #@staticmethod
+    @staticmethod
     def get_petsc_dir(petsc_dir):
         if not petsc_dir: return None
         petsc_dir = os.path.expandvars(petsc_dir)
